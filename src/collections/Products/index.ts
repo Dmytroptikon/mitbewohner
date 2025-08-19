@@ -1,10 +1,10 @@
 import type { CollectionConfig } from 'payload'
 
 export const Products: CollectionConfig = {
-    slug: 'products',
-    admin: {
-        useAsTitle: 'name'
-    },
+  slug: 'products',
+  admin: {
+    useAsTitle: 'name',
+  },
   fields: [
     {
       name: 'image',
@@ -24,6 +24,11 @@ export const Products: CollectionConfig = {
     },
     {
       name: 'quantity',
+      type: 'text',
+      required: true,
+    },
+    {
+      name: 'limit',
       type: 'text',
       required: true,
     },

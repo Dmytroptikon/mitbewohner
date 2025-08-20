@@ -24,12 +24,17 @@ export const Products: CollectionConfig = {
     },
     {
       name: 'quantity',
-      type: 'text',
+      type: 'number',
       required: true,
     },
     {
       name: 'limit',
-      type: 'text',
+      type: 'number',
+      required: true,
+    },
+    {
+      name: 'critical',
+      type: 'number',
       required: true,
     },
   ],

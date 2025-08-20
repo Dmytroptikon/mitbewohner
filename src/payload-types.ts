@@ -186,8 +186,9 @@ export interface Product {
   image: number | Media;
   name: string;
   units: string;
-  quantity: string;
-  limit: string;
+  quantity: number;
+  limit: number;
+  critical: number;
   updatedAt: string;
   createdAt: string;
 }
@@ -327,6 +328,7 @@ export interface ProductsSelect<T extends boolean = true> {
   units?: T;
   quantity?: T;
   limit?: T;
+  critical?: T;
   updatedAt?: T;
   createdAt?: T;
 }

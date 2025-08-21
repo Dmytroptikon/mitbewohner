@@ -1,6 +1,7 @@
 import { CollectionConfig } from 'payload'
 import { revalidatePage, revalidateDelete } from './hooks/revalidatePage';
 import { Products } from '@/blocks/Products';
+import { Shoping } from '@/blocks/Shoping';
 
 export const Pages: CollectionConfig = {
   slug: 'pages',
@@ -24,7 +25,7 @@ export const Pages: CollectionConfig = {
       type: 'blocks',
       required: true,
       blocks: [
-        Products
+        Products, Shoping
       ],
     },
   ],

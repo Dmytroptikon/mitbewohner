@@ -168,12 +168,22 @@ export interface Page {
   id: number;
   title: string;
   slug: string;
-  blocks: {
-    title?: string | null;
-    id?: string | null;
-    blockName?: string | null;
-    blockType: 'products';
-  }[];
+  blocks: (
+    | {
+        title?: string | null;
+        id?: string | null;
+        blockName?: string | null;
+        blockType: 'products';
+      }
+    | {
+        title?: string | null;
+        criticalTitle?: string | null;
+        optionTitle?: string | null;
+        id?: string | null;
+        blockName?: string | null;
+        blockType: 'shoping';
+      }
+  )[];
   updatedAt: string;
   createdAt: string;
 }
@@ -311,6 +321,15 @@ export interface PagesSelect<T extends boolean = true> {
           | T
           | {
               title?: T;
+              id?: T;
+              blockName?: T;
+            };
+        shoping?:
+          | T
+          | {
+              title?: T;
+              criticalTitle?: T;
+              optionTitle?: T;
               id?: T;
               blockName?: T;
             };

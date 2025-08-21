@@ -7,8 +7,9 @@ type Product = {
   id: string;
   name?: string;
   units?: string;
-  quantity?: string;
-  limit?: string;
+  quantity?: number;
+  limit?: number;
+  critical?: number;
 };
 type ProductsProps = {
   title?: string;

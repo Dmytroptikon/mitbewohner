@@ -17,7 +17,12 @@ html {
 html,
 body,
 #app {
-  height: 100%;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-height: 100vh;
+  height: auto; 
+  overflow-x: hidden;
 }
 
 body {
@@ -64,7 +69,7 @@ h1 {
 }
 
 p {
-  margin: 24px 0;
+  margin: 5px 0;
 
   @media (max-width: 1024px) {
     margin: calc(var(--base) * 0.75) 0;
@@ -161,4 +166,10 @@ svg {
       border-radius: 4px;
     }
   }
+}
+
+.container {
+  max-width: 1440px;
+  padding: 0 80px;
+  margin: 0 auto;
 }
